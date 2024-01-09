@@ -1,0 +1,20 @@
+/*
+Theme Name: Ubuntu Theme
+Theme URI: http://pearceoshea.com
+Author: Pearce O'Shea
+Author URI: http://pearceoshea.com
+Description: It looks like the Ubuntu site.
+Version: 1.0
+Tags: light, dark, two-columns, right-sidebar
+Text Domain: ubuntu-theme
+*/
+
+* {
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+
+.test {
+    background-color: blue;
+}
