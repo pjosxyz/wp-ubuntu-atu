@@ -26,6 +26,9 @@ Text Domain: ubuntu-theme
 
     /* Breakpoints for elements */
     --nav-break: 980px;
+
+/*    Typography */
+    --heading-size: 2.4rem;
 }
 
 html {
@@ -34,6 +37,26 @@ html {
 
 body {
     font-family: 'Ubuntu', sans-serif;
+}
+
+/* block styling */
+.ubuntu-columns {
+    padding: 2.4rem;
+}
+
+.ubuntu-stats-column-heading {
+    margin-bottom: 2rem;
+}
+
+.ubuntu-text--statistic .ubuntu-software-heading {
+    color: var(--ubuntu-orange);
+    font-size: 4.8rem;
+    margin-top: 2rem;
+}
+
+.ubuntu-text--stat-heading {
+    font-size: var(--heading-size) !important;
+
 }
 
 .ubuntu__wrapper {
@@ -47,8 +70,7 @@ body {
     max-height: 70rem;
 
     @media (max-width: 810px) {
-        min-height: 100dvh;
-        max-height: 100dvh;
+        min-height: 100%;
     }
 }
 
@@ -65,11 +87,10 @@ body {
     margin: 0;
     padding: 0 5%;
 
-    border: 1px solid blue;
 
     @media (max-width: 980px) {
         padding: 0;
-        height: 90vh;
+        /*height: 50vh;*/
     }
 }
 
@@ -84,7 +105,7 @@ body {
         background-color: var(--dark-grey);
         color: white;
         font-size: 1.4rem;
-        padding: 0.8rem;
+        padding: 0.8rem 1.6rem;
 
         & .student-details__group {
             display: flex;
@@ -156,7 +177,8 @@ body {
         align-items: center;
 
         @media (max-width: 810px) {
-            align-content: start;
+            flex-direction: column;
+            justify-content: center;
             align-items: start;
         }
 
@@ -169,6 +191,7 @@ body {
 
             @media (max-width: 810px) {
                 margin-top: 2.4rem;
+                width: 100%;
             }
 
             & h1 {
@@ -205,6 +228,10 @@ body {
             width: 35%;
             margin-top: -8%;
 
+            @media (max-width: 810px) {
+                margin-top: 2.4rem;
+            }
+
             & .ubuntu-header__featured-image {
                 width: 100%;
                 object-fit: cover;
@@ -213,22 +240,31 @@ body {
     }
 }
 
-.ubuntu-page-content {
+
+
+.ubuntu-page-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 2% 5%;
+
+    & .ubuntu-page-content {
+        max-width: 1440px;
+        width: 100%;
+        font-size: 1.6rem;
+        padding: 0 5%;
+        margin: 5.6rem auto;
+
+        & h2 {
+            margin-bottom: 2rem;
+        }
+    }
 }
 
-.ubuntu-container {
-    max-width: 1440px;
-    height: 400px;
-    width: 100%;
-}
 
 .ubuntu-footer__border {
     border-top: 1px solid var(--grey);
     padding: 1.6rem 5%;
+
+
 }
 
 .ubuntu-footer {
@@ -288,3 +324,4 @@ body {
         margin-top: 3.2rem;
     }
 }
+

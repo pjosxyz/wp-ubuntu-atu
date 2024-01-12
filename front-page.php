@@ -2,9 +2,8 @@
 get_header();
 ?>
 
-<div class="ubuntu-wrapper">
+<div class="ubuntu-page-wrapper">
     <article class="ubuntu-page-content">
-
 	<?php
 	if( have_posts() ) {
 		while( have_posts() ) {
