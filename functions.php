@@ -44,12 +44,13 @@
 add_action( 'widgets_init', 'ubuntuTheme_widgets' );
 
 	// remove
-function custom_search_template_redirect() {
+function custom_search_page() {
 	if (is_search()) {
-		include(get_template_directory() . '/search-results.php');  // path to your custom template
+		include(get_template_directory() . '/search-results.php');
 		exit;
 	}
 }
-add_action('template_redirect', 'custom_search_template_redirect');
+add_action('template_redirect', 'custom_search_page');
+
 
 

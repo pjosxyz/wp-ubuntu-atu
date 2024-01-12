@@ -39,6 +39,22 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+.ubuntu-search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    & .ubuntu-search-results__result {
+        background-color: var(--light-grey);
+        padding: 2.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 1.6rem;
+        margin-bottom: 1.6rem;
+    }
+}
+
 /* block styling */
 .ubuntu-columns {
     padding: 2.4rem;
