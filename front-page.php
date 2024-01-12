@@ -12,7 +12,11 @@ get_header();
 		}
 	}
 	?>
-
+	<?php
+	if(is_active_sidebar('image-gallery-home')) {
+		dynamic_sidebar( 'image-gallery-home' );
+	}
+	?>
     </article>
 </div>
 

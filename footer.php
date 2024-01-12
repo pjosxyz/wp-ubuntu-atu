@@ -1,4 +1,10 @@
+
 <div class="ubuntu__wrapper ubuntu-footer__border">
+	<?php
+	if(is_active_sidebar('footer-guestbook')) {
+		dynamic_sidebar( 'footer-guestbook' );
+	}
+	?>
     <footer class="ubuntu-footer">
         <div class="ubuntu-footer__content">
 			<?php

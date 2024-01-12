@@ -39,6 +39,15 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+.image-gallery {
+    background-color: #f6f6f6;
+    padding: 2.4rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.4rem;
+    margin-top: 3rem;
+}
+
 .ubuntu-search-results {
     display: flex;
     flex-direction: column;
