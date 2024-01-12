@@ -27,4 +27,29 @@
 
 	add_action('wp_enqueue_scripts', 'ubuntuTheme_register_styles');
 
+	function ubuntuTheme_widgets() {
+		register_sidebar(
+			array(
+				'before_title' => '',
+				'after_title' => '',
+				'before_widget' => '<ul class="">',
+				'after_widget' => '</ul>',
+				'name' => 'searchbar-nav',
+				'id' => 'searchbar-nav', // css id
+				'description' => 'search widget area in header'
+			)
+		);
+	}
+
+add_action( 'widgets_init', 'ubuntuTheme_widgets' );
+
+	// remove
+function custom_search_template_redirect() {
+	if (is_search()) {
+		include(get_template_directory() . '/search-results.php');  // path to your custom template
+		exit;
+	}
+}
+add_action('template_redirect', 'custom_search_template_redirect');
+
 

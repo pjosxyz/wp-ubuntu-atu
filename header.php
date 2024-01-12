@@ -21,8 +21,14 @@
     <header class="ubuntu-header">
         <div class="student-details">
             <div class="student-details__group">
-                <p class="student-details__text">Pearce O'Shea</p>
-                <p class="student-details__text">G00425735</p>
+<!--                <p class="student-details__text">Pearce O'Shea</p>-->
+<!--                <p class="student-details__text">G00425735</p>-->
+
+                <?php
+                    if(is_active_sidebar('searchbar-nav')) {
+	                    dynamic_sidebar( 'searchbar-nav' );
+                    }
+                ?>
             </div>
         </div>
         <nav>

@@ -1,13 +1,25 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<h1 class="shit">I fucking hate all of this</h1>
-</body>
-</html>
+<?php
+get_header();
+?>
+
+    <div class="ubuntu-page-wrapper">
+    <article class="ubuntu-page-content">
+
+	<?php
+	if( have_posts() ) {
+		while( have_posts() ) {
+			the_post();
+
+			get_template_part( 'template-parts/content', 'archive');
+		}
+	}
+	?>
+	<?php
+	the_posts_pagination();
+	?>
+    </article></div>
+
+
+<?php
+get_footer();
+?>
