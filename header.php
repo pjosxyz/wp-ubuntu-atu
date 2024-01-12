@@ -54,30 +54,25 @@
         </nav>
         <div class="ubuntu-header__title-area">
 
-                <!-- https://wpengine.com/resources/wordpress-custom-fields-how-to/ -->
+                <!--  -->
             <div class="title-area__text">
 		        <?php
 		        if (is_search()) {
-			        // Display "Search Results" if it's a search results page
 			        echo "<h1>Search Results</h1>";
-		        } elseif (isset($post)) {
-			        // If $post is set and it's not a search page, get the custom fields
+		        } else {
+			        // https://wpengine.com/resources/wordpress-custom-fields-how-to/
 			        $extended_title = get_post_meta($post->ID, 'extended-title', true);
 			        $header_blurb = get_post_meta($post->ID, 'header-blurb', true);
 
 			        if (!empty($extended_title)) {
-				        echo "<h1>" . esc_html($extended_title) . "</h1>";
+				        echo "<h1>" . $extended_title . "</h1>";
 			        } else {
-				        // Fallback to the default post/page title if extended title is empty
-				        echo "<h1>" . esc_html(get_the_title()) . "</h1>";
+				        echo "<h1>" . get_the_title() . "</h1>";
 			        }
 
 			        if (!empty($header_blurb)) {
-				        echo "<p>" . esc_html($header_blurb) . "</p>";
+				        echo "<p>" . $header_blurb . "</p>";
 			        }
-		        } else {
-			        // Fallback to the default post/page title if $post is not set
-			        echo "<h1>" . esc_html(get_the_title()) . "</h1>";
 		        }
 		        ?>
             </div>
